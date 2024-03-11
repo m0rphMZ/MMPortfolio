@@ -1,0 +1,19 @@
+{
+  "name": "myportfolio-main",
+  "version": "1.0.0",
+  "description": "- The design is based on [Bedimcode](https://github.com/bedimcode)\r - The resume is created on [FlowCV](https://flowcv.com/)\r - The email service provider is [EmailJs](https://www.emailjs.com/)\r - Contact form validations are added using [JavaScript](https://www.youtube.com/watch?v=fz8bwvn9lA4) \r - Normal alerts are replaced with Sweet Alert [SweetAlert](https://sweetalert.js.org)\r - The favicon generator is [favicon.io](https://favicon.io/favicon-generator/)\r - The Open Graph Meta Tags are added [Open Graph](https://ogp.me/)\r - Videos are embedded from [YouTube](https://www.youtube.com)\r - Presentations are  embedded from [Beautiful.ai](https://www.beautiful.ai)\r - Added Google Tag script for [Google Analytics](https://analytics.google.com)\r - Online meeting integration by [Calendly](https://calendly.com/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+
+  
+
+}
