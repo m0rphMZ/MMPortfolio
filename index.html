@@ -1,296 +1,1575 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<link rel="icon" href="images/icon.ico" type="image/x-icon">
-		<title>M.Mzoughi's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <!--==================== UNICONS ====================-->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        
+        <!--==================== SWIPER CSS ====================-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        
+        <!--==================== CSS ====================-->
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-		<!-- Open Graph tags -->
-		<meta property="og:title" content="M.Mzoughi's Portfolio">
-		<meta property="og:description" content="Welcome, Friend">
-		<meta property="og:image" content="assets/css/images/IntroWall.jpg">
+        <!--==================== EMAIL SERVICE ====================-->
+        <!-- Sweet Alert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- Email.JS -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init('gF3M_-jS8KuvoCpV4');
+            })();
+        </script>
 
-	</head>
-	<body class="is-preload">
+        <!--==================== CALENDAR SERVICE ====================-->
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<p><span class="image fit"><img src="images/pic05.jpg" alt="" /></span></p>
+        <!--==================== TITLE and Favicon ====================-->
+        <title>M.Mzoughi's Portfolio</title>
+        <!-- <link rel="shortcut icon" type="image/png" href="assets/img/"> --> 
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon_io/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
+        <!-- <link rel="manifest" href="/site.webmanifest"> -->
 
-							<li><a href="#intro">Introduction</a></li>
-							<li><a href="#one">Education</a></li>
-							<li><a href="#two">Projects and Internships</a></li>
-							<li><a href="#three">Skills</a></li>
-							<li><a href="#four">Contact</a></li>
-							<li><button onclick="downloadResume()" class="button icon solid fa-save fit">Resume</button></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+        <!-- MS Tile - for Microsoft apps-->
+        <meta name="msapplication-TileImage" content="https://github.com/m0rphMZ/MMPortfolio/blob/main/assets/snaps/light.png?raw=true" />    
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-						<h1>Welcome to my portfolio</h1>
-						<p>Hello, I'm <strong>Mahmoud Mzoughi</strong> , an engineering student at <strong>ESPRIT</strong>. I am currently pursuing a career in <strong>IT Architecture and Cloud Computing (ArcTIC).</strong> With a strong foundation in software development and a passion for innovation, I have worked on multiple cross-platform development projects.</p>
-						<p>As an aspiring professional, I strive to be creative and formal in my approach. I am committed to delivering high-quality solutions that not only meet the needs of my clients but also exceed their expectations. Constantly exploring new technologies and staying updated with industry trends, I aim to bring a fresh perspective to every project.</p>
-						<ul class="actions">
-							<!--<li><a href="#one" class="button scrolly">Learn more</a></li>-->
-							<li><a href="Resume/Resume_Mahmoud_Mzoughi.pdf" class="button icon solid fa-save" download>Download Resume</a></li>
-						</ul>
-						</div>
-					</section>
+        <!-- HTML Meta Tags -->
+        <title>M.Mzoughi's Portfolio 👋</title>
+        <meta name="description" content="ESPRIT engineering student specializing in IT architecture and cloud computing.">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://m0rphmz.github.io/MMPortfolio/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="M.Mzoughi's Portfolio 👋">
+        <meta property="og:description" content="ESPRIT engineering student specializing in IT architecture and cloud computing.">
+        <meta property="og:image" content="https://github.com/m0rphMZ/MMPortfolio/blob/main/assets/snaps/light.pnghttps://github.com/m0rphMZ/MMPortfolio/blob/main/assets/snaps/light.png?raw=true">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="MMPortfolio.com">
+        <meta property="twitter:url" content="https://m0rphmz.github.io/MMPortfolio/">
+        <meta name="twitter:title" content="M.Mzoughi's Portfolio 👋">
+        <meta name="twitter:description" content="ESPRIT engineering student specializing in IT architecture and cloud computing.">
+        <meta name="twitter:image" content="https://github.com/m0rphMZ/MMPortfolio/blob/main/assets/snaps/light.png?raw=true">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2367QRTG56"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2367QRTG56');
+        </script>
+
+    </head>
+
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Mahmoud Mzoughi</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class="uil uil-estate nav__icon"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class="uil uil-user nav__icon"></i> About
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i> Skills
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#projects" class="nav__link">
+                                <i class="uil uil-briefcase-alt nav__icon"></i> Projects
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#paper" class="nav__link">
+                                <i class="uil uil-scenery nav__icon"></i> Repository
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class="uil uil-message nav__icon"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme Change Buttons -->
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
 
 
-					<!-- One -->
-						<section id="one" class="wrapper style1 spotlights">
-							<section>
-							<div class="contentEdu">
-								<h2>Education</h2>
-								<ul>
-								<li>
-									<div class="education-item">
-									<div>
-										<h3 >Higher School Of Digital Economy - ESEN</h3>
-										<h5 class="robot-text">Applied License in IT applied to management</h5>
-									</div>
-									<span class="date"><em>Sep 2018 - May 2021</em></span>
-									</div>
-									<span class="date"><h6><em>Manouba</em></h6></span>
-								</li>
-								<hr />
-								<li>
-									<div class="education-item">
-									<div>
-										<h3 >Private Higher School of Engineering and Technology - <strong>ESPRIT</strong></h3>
-										<h5 class="robot-text">Pursuing an engineering degree at ESPRIT
-											Specializing in Architecture IT & Cloud Computing - ArcTIC, Starting from next year.</h5>
-									</div>
-									<span class="date"><em>Sep 2022 - 2025</em></span>
-									</div>
-									<span class="date"><h6><em>Ariana</em></h6></span>
-								</li>
-								</ul>
-							</div>
-							</section>
-						</section>
-  
-  
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="uil uil-apps"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home" data-id="home">
+                <div class="home__container container grid">
+                    <div class="home__content grid">
+                        <div class="home__social">
+                            <a href="https://www.linkedin.com/in/mmzoughi/" target="_blank" class="home__social-icon">
+                                <i class="uil uil-linkedin-alt"></i>
+                            </a>
+                            <!-- <a href="https://www.researchgate.net/profile/Erol-Bicer/research" target="_blank" class="home__social-icon">
+                                <i class="uil uil-book-open"></i>
+                            </a>-->
+                            <a href="https://github.com/m0rphMZ" target="_blank" class="home__social-icon">
+                                <i class="uil uil-github-alt"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__img">
+                            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+
+                                    <image class="home__blob-img" x='30' y='36' xlink:href="assets/img/perfil.png"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div class="home__data">
+                            <h1 class="home__title">Hi, I am Mahmoud.</h1>
+                            <h3 class="home__subtitle">Engineering Student</h3>
+                            <p class="home__description">specializing in IT architecture and cloud computing. Dedicated to exploring innovative solutions and mastering complex systems. Passionate about the intersection of technology and creativity.</p>
+                            <a href="#contact" class="button button--flex">
+                                Contact Me <i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-button button--flex">
+                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                            <span class="home__scroll-name">Scroll Down</span>
+                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about" data-id="about">
+                <h2 class="section__title">About Me</h2>
+                <span class="section__subtitle">Introduction</span>
+
+                <div class="about__container container grid">
+                    <img src="assets/img/about.jpeg" alt="Me" class="about__img">
+
+
+                    <div class="about__data">
+                        <p class="about__description">Engineering student at ESPRIT, Tunisia, specializing in IT architecture and cloud computing. With a focus on innovative solutions and mastering complex systems, I bring a passion for technology and creativity to my work.</p>
+
+                        <div class="about__info">
+                            <div>
+                                <span class="about__info-title">1</span>
+                                <span class="about__info-name">Year <br> Experience</span>
+                            </div>
+
+                            <div>
+                                <span class="about__info-title">3+</span>
+                                <span class="about__info-name">Projects <br> Completed</span>
+                            </div>
+
+                            <!--- <div>
+                                <span class="about__info-title">08</span>
+                                <span class="about__info-name">Papers <br> Published</span>
+                            </div> -->
+                        </div>
+
+                        <div class="about__buttons">
+                            <a download="" href="assets/pdf/RESUME_MZOUGHI_MAHMOUD.pdf" class="button button--flex">
+                                Download CV<i class="uil uil-download-alt button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== SKILLS ====================-->
+            <section class="skills section" id="skills" data-id="skills">
+                <h2 class="section__title">Skills</h2>
+                <span class="section__subtitle">Technical Competence</span>
+
+                <div class="skills__container container grid">
+                    <div>
+                        <!--==================== SKILLS 1 ====================-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__content skills__open">
+                                <div class="skills__header">
+                                    <i class="uil uil-cloud-computing skills__icon"></i>
+    
+                                    <div>
+                                        <h1 class="skills__titles">Cloud Platforms</h1>
+                                        <span class="skills__subtitle">AZ Fundamentals Certified</span> 
+                                    </div>
+    
+                                    <i class="uil uil-angle-down skills__arrow"></i>
+                                </div>
+    
+                                <div class="skills__list grid">
+                                    <div class="skills__data">
+                                        <div class="skills__titles">
+                                            <h3 class="skills__name">Azure</h3>
+                                            <span class="skills__number">Proficient</span> 
+                                            
+                                        </div>
+                                        <div class="skills__bar">
+                                            <span class="skills__percantage skills__80"></span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="skills__data">
+                                        <div class="skills__titles">
+                                            <h3 class="skills__name">AWS</h3>
+                                            <span class="skills__number">Intermediate</span> 
+                                        </div>
+                                        <div class="skills__bar">
+                                            <span class="skills__percantage skills__60"></span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="skills__data">
+                                        <div class="skills__titles">
+                                            <h3 class="skills__name">OpenStack</h3>
+                                            <span class="skills__number">Proficient</span> 
+                                        </div>
+                                        <div class="skills__bar">
+                                            <span class="skills__percantage skills__80"></span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div> 
+
+
+                            <!--==================== SKILLS 2 ====================-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-arrow skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__titles">Programming</h1>
+                                    <!-- <span class="skills__subtitle">More than 2 years</span> -->
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">C#</h3>
+                                        <span class="skills__number">Proficient</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__60"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">.NET</h3>
+                                        <span class="skills__number">Intermediate</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__40"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Java</h3>
+                                        <span class="skills__number">Proficient</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__60"></span>
+                                    </div>
+                                </div>
+                    
+
+                            </div>
+                        </div> 
 
 
 
-				<!-- Two -->
-					<section id="two" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/ShopySolde.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h3>End-of-Studies Project - ShopySolde </h3>
-									<h5>(December - May (2021 - 2022))</h5>
-									<p>Collaborated in a team of two on an end-of-studies project called <strong>ShopySolde</strong>, a liquidation and destocking platform.</p>
-									<ul class="actions">
-										<li><a href="ShopySolde.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h3>Multi-Platform development project (Java, Symfony, Codename One) - Touskieart</h3>
-									<h5>(January - April 2023)</h5>
-									<p>Worked as a team member in a multi-platform development project utilizing Java, Symfony, and Codename One
-										technologies.</p>
-									<ul class="actions">
-										<li><a href="Touskieart.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/PicProj.png" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h3>SMDevis : Summer Internship Project</h3>
-									<h5>(June - July 2023)</h5>
-									<p>A Symfony-based platform linking service seekers with potential SM Devis partners. 
-										</p>
-									<ul class="actions">
-										<li><a href="SummerInternship.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>SKILLS</h2>
-							<p>I have acquired a diverse range of skills throughout my journey as a software developer. With a deep understanding of Symfony, React, Java, SQL, CSS, Git, and Unity, I am well-equipped to take on various projects and explore new technologies.</p>
-							<div class="features">
-								<section>
-									<span class="icon circle-icon">
-										<i class="fab fa-symfony"></i>
-									</span>
-									<h3>Symfony:</h3>
-									<p>Symfony has been a significant part of my third-year project at ESPRIT, where I leveraged its powerful features to develop robust and scalable web applications.</p>
-								</section>
-								<section>
-									<span class="icon circle-icon">
-										<i class="fab fa-react"></i>
-									</span>
-									<h3>React:</h3>
-									<p>I gained expertise in React through my End of Studies project at ESEN, where I learned the skill from scratch and built dynamic and interactive user interfaces.</p>
-								</section>								
-								<section>
-									<span class="icon circle-icon">
-										<i class="fab fa-java"></i>
-									</span>
-									<h3>Java:</h3>
-									<p>Java is another skill I honed during my third-year project at ESPRIT, where I utilized it to develop efficient and reliable software solutions.</p>
-								</section>
-								<section>
-									<span class="icon circle-icon">
-										<i class="fas fa-database"></i>
-									</span>
-									<h3>SQL:</h3>
-									<p>Throughout my studies at both ESEN and ESPRIT, SQL has been a fundamental skill that I have continually developed. I have worked with SQL databases, written complex queries, and managed data effectively.</p>
-								</section>
-								<section>
-									<span class="icon circle-icon">
-										<i class="fab fa-css3-alt"></i>
-									</span>
-									<h3>CSS:</h3>
-									<p>Similar to SQL, CSS has been an integral part of my studies at both ESEN and ESPRIT. I have a strong grasp of CSS and its various frameworks, enabling me to create visually appealing and responsive designs.</p>
-								</section>
-								<section>
-									<span class="icon circle-icon">
-										<i class="fab fa-git"></i>
-									</span>
-									<h3>Git:</h3>
-									<p>I have gained in-depth knowledge of Git during my third year at ESPRIT. I have utilized Git for collaboration, code versioning, and tracking changes in projects.</p>
-								</section>
-								<section>
-									<span class="icon circle-icon">
-										<i class="fab fa-unity"></i>
-									</span>
-									<h3>Unity:</h3>
-									<p>Unity holds a special place in my heart as it combines my passion for video gaming and development. In my spare time, I have acquired a certification in Unity and continue to explore and learn more about video game development.</p>
-								</section>
-								<section>
-									<span class="icon circle-icon">
-										<i class="fab fa-node"></i>
-									</span>
-									<h3>NodeJS:</h3>
-									<p>NodeJS served as the backend for my End-of-Studies project at ESEN, enabling me to build powerful and scalable server-side application.</p>
-								</section>
-							</div>
-							<ul class="actions">
-								<li><a href="https://github.com/m0rphMZ" class="button icon brands fa-github">My Github</a></li>
-							</ul>
-						</div>
-					</section>
 
-				<!-- Three -->
-				<section id="four" class="wrapper contactStyle fade-up">
-					<div class="inner">
-						<h2>Get in touch</h2>
-						<p>If you have any questions or inquiries, feel free to reach out to me using the form below. I'll get back to you as soon as possible.</p>
-						<div class="split style1">
-							<section>
-								<form method="post" action="mailto:mahmoud.mzoughi@esprit.tn">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" required />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="email" name="email" id="email" required />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="5" required></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><button type="submit" class="button submit">Send Message</button></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<ul class="contact">
-									<li>
-										<h3>Address</h3>
-										<span>Ksar Said,<br />
-										Bardo,<br />
-										TUNISIA</span>
-									</li>
-									<li>
-										<h3>Email</h3>
-										<a href="mailto:mahmoud.mzoughi@esprit.tn">mahmoud.mzoughi@esprit.tn</a>
-									</li>
-									<li>
-										<h3>Phone</h3>
-										<span>(+216) 29-916-488</span>
-									</li>
-									<li>
-										<h3>Social</h3>
-										<ul class="icons">
-											<li><a href="https://twitter.com/MMzoughi8" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="https://github.com/m0rphMZ" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-											<li><a href="https://www.linkedin.com/in/mahmoud-mzoughi-6994891b8/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-										</ul>
-									</li>
-								</ul>
-							</section>
-						</div>
-					</div>
-				</section>
-				
+                        </div>
 
-			</div>
+                        <!--==================== SKILLS 3 ====================-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-database skills__icon"></i>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-footer">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Inspired by my Favourite TV-Show, MR-ROBOT 🤖. All rights reserved.</li><li>Designed by: <a href="https://www.linkedin.com/in/mahmoud-mzoughi-6994891b8/">Mahmoud</a></li>
-					</ul>
-				</div>
-			</footer>
+                                <div>
+                                    <h1 class="skills__titles">Databases</h1>
+                                </div>
 
-		<!-- Scripts -->
-		<script>
-			function downloadResume() {
-			  var fileUrl = 'Resume/Resume_Mahmoud_Mzoughi.pdf';
-			  var link = document.createElement('a');
-			  link.href = fileUrl;
-			  link.download = 'Mahmoud_Mzoughi_Resume.pdf';
-			  link.click();
-			}
-		  </script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
 
-	</body>
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Oracle</h3>
+                                        <span class="skills__number">Proficient</span> 
+                                        
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__80"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">SQL Server</h3>
+                                        <span class="skills__number">Proficient</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__80"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <div>
+                         
+
+                        <!--==================== SKILLS 4 ====================-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-web-grid skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__titles">Web </h1>
+                                    <!-- <span class="skills__subtitle">More than 2 years</span> -->
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">JavaScript</h3>
+                                        <span class="skills__number">Proficient</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__80"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Bootstrap</h3>
+                                        <span class="skills__number">Proficient</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__80"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Symfony</h3>
+                                        <span class="skills__number">Proficient</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__80"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">React</h3>
+                                        <span class="skills__number">Proficient</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__80"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Angular</h3>
+                                        <span class="skills__number">Intermediate</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__60"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div> 
+
+
+                        <!--==================== SKILLS 5 ====================-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-microsoft skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__titles">Operating Systems </h1>
+                                    <!-- <span class="skills__subtitle">More than 2 years</span> -->
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Windows</h3>
+                                        <span class="skills__number">Proficient</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__80"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Linux</h3>
+                                        <span class="skills__number">Proficient</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__80"></span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+                        <!--==================== SKILLS 6 ====================-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-wifi-router skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__titles">Routing and Switching</h1>
+                                    <!-- <span class="skills__subtitle">More than 2 years</span> -->
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Cisco Certified CCNA</h3>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__100"></span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        
+                        
+
+
+
+
+
+
+                    </div> 
+                </div>
+            </section>
+
+            <!--==================== QUALIFICATION ====================-->
+            <section class="qualification section">
+                <h2 class="section__title">Qualifications</h2>
+                <span class="section__subtitle">Academic and Professional Career</span>
+
+                <div class="qualification__container container">
+                    <div class="qualification__tabs">
+                        <div class="qualification__button button--flex qualification__active" data-target="#education">
+                            <i class="uil uil-graduation-cap qualification__icon"></i>
+                            Education
+                        </div>
+
+                        <div class="qualification__button button--flex" data-target="#work">
+                            <i class="uil uil-briefcase-alt qualification__icon"></i>
+                            Experience
+                        </div>
+                    </div>
+                    <div class="qualification__sections">
+                        <!--==================== QUALIFICATION CONTENT 1 ====================-->
+                        <div class="qualification__content qualification__active" data-content id="education">
+                             <!--==================== QUALIFICATION  1 ====================-->
+                             <div class="qualification__data">
+                                <div>
+                                    <span class="qualification__degree">Computer Science Major</span>
+                                    <h3 class="qualification__tittle">Scientific Baccalaureate</h3>
+                                    <!--<span class="qualification__subtitle">Hacettepe University</span>-->
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2017
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                             <!--==================== QUALIFICATION  2 ====================-->
+                             <div class="qualification__data">
+                                <div></div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__degree">Applied License in IT applied to Management</span>
+                                    <h3 class="qualification__tittle">ESEN - Higher School Of Digital Economy</h3>
+                                    <!--<span class="qualification__subtitle">KINGS</span>-->
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2018 - 2021
+                                    </div>
+                                </div>
+
+                            </div>
+
+                             <!--==================== QUALIFICATION  3 ====================-->
+                             <div class="qualification__data">
+                                <div>
+                                    <span class="qualification__degree">Engineering Degree with Specialization in IT Architecture and Cloud Computing</span>
+                                    <h3 class="qualification__tittle">ESPRIT - Private Higher School of Engineering and Technology</h3>
+                                     <!--<span class="qualification__subtitle">Seoul National University</span>-->
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2022 - Present
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <!-- <span class="qualification__line"></span> -->
+                                </div>
+                            </div>
+
+                             <!--==================== QUALIFICATION  4 ====================-->
+                             <div class="qualification__data">
+                                <!-- <div></div> -->
+
+                                <!-- <div>
+                                    <span class="qualification__rounder"></span> -->
+                                    <!-- <span class="qualification__line"></span> -->
+                                <!-- </div> -->
+
+                                <!-- <div>
+                                    <h3 class="qualification__tittle">Nuclear Engineer</h3>
+                                    <span class="qualification__subtitle">Hacettepe University</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2008 - 2013
+                                    </div>
+                                </div> -->
+
+
+                                
+                            </div>
+
+                        </div>
+
+                        <!--==================== QUALIFICATION CONTENT 2 ====================-->
+                        <div class="qualification__content" data-content id="work">
+                            <!--==================== QUALIFICATION  1 ====================-->
+                            <div class="qualification__data">
+                               <div>
+                                   <h3 class="qualification__tittle">Internship - End-of-Studies Project</h3>
+                                   <span class="qualification__subtitle">SM DEVIS</span>
+                                   <div class="qualification__calendar">
+                                       <i class="uil uil-calendar-alt"></i>
+                                       Jan 2021 – April 2021
+                                   </div>
+                               </div>
+                               <div>
+                                   <span class="qualification__rounder"></span>
+                                   <span class="qualification__line"></span>
+                               </div>
+                           </div>
+
+                            <!--==================== QUALIFICATION  2 ====================-->
+                            <div class="qualification__data">
+                               <div></div>
+                               <div>
+                                   <span class="qualification__rounder"></span>
+                               </div>
+
+                               <div>
+                                   <h3 class="qualification__tittle">Summer Internship - Symfony Developer</h3>
+                                   <span class="qualification__subtitle">SM DEVIS RÉNOV 2.0</span>
+                                   <div class="qualification__calendar">
+                                       <i class="uil uil-calendar-alt"></i>
+                                       Jun 2023 - Jul 2023
+                                   </div>
+                               </div>
+
+                           </div>
+
+                            <!--==================== QUALIFICATION  3 ====================
+                            <div class="qualification__data">
+                               <div>
+                                   <h3 class="qualification__tittle">Associate Manager</h3>
+                                   <span class="qualification__subtitle">FNC Technology</span>
+                                   <div class="qualification__calendar">
+                                       <i class="uil uil-calendar-alt"></i>
+                                       2019 - 2023
+                                   </div>
+                               </div>
+                               <div>
+                                   <span class="qualification__rounder"></span>
+                                   <span class="qualification__line"></span>
+                               </div>
+                           </div>
+
+                            ==================== QUALIFICATION  4 ====================
+                            <div class="qualification__data">
+                                <div></div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                     <span class="qualification__line"></span> 
+                                </div>
+ 
+                                <div>
+                                    <h3 class="qualification__tittle">Manager</h3>
+                                    <span class="qualification__subtitle">FNC Technology</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2023 - Present
+                                    </div>
+                                </div>
+ 
+                            </div>
+                        -->
+
+                       </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PROJECTS ====================-->
+            <section class="projects section" id="projects" data-id="projects">
+                <h2 class="section__title">Projects</h2>
+                <span class="section__subtitle">Involved Projects</span>
+
+                <div class="projects__container container grid">
+                    <!--==================== PROJECTS 1 ====================-->
+                    <div class="projects__content">
+                        <div>
+                            <i class="uil uil-swatchbook projects__icon"></i>
+                            <h3 class="projects__title">OpenStack Cloud Infrastructure Project</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link projects__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="projects__modal">
+                            <div class="projects__modal-content">
+                                <h4 class="projects__modal-title">OpenStack Cloud Infrastructure Project - Project Lead </h4>
+                                <i class="uil uil-times projects__modal-close"></i>
+
+                                <ul class="projects__modal-projects grid">
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Collaborated on designing, deploying, and managing a multi-node OpenStack cloud infrastructure.</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Configured essential services manually and utilized automation tools such as Ansible.</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Employed Heat stack templates and Magnum for automated resource provisioning.</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Leveraged Docker and Kubernetes for container orchestration within the cluster.</p>
+                                    </li>  
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Integrated monitoring tools like Grafana and Prometheus for enhanced efficiency.</p>
+                                    </li> 
+                                
+                                </ul>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <!--==================== PROJECTS 2 ====================-->
+                    <div class="projects__content">
+                        <div>
+                            <i class="uil uil-swatchbook projects__icon"></i>
+                            <h3 class="projects__title">Touskieart</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link projects__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="projects__modal">
+                            <div class="projects__modal-content">
+                                <h4 class="projects__modal-title">Multi-Platform Development Project - Touskieart - Development Team Member</h4>
+                                <i class="uil uil-times projects__modal-close"></i>
+
+                                <ul class="projects__modal-projects grid">
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Collaborated on a multi-platform project (Java, Symfony, Codename One), designing, implementing, and debugging functionalities while maintaining high code quality.</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Utilized Git/GitHub for efficient version control and seamless collaboration.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>         
+
+                    <!--==================== PROJECTS 3 ====================-->
+                    <div class="projects__content">
+                        <div>
+                            <i class="uil uil-swatchbook projects__icon"></i>
+                            <h3 class="projects__title">SkyBound</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link projects__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="projects__modal">
+                            <div class="projects__modal-content">
+                                <h4 class="projects__modal-title">SkyBound: Drone Sales Application - Development Team Member</h4>
+                                <i class="uil uil-times projects__modal-close"></i>
+
+                                <ul class="projects__modal-projects grid">
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Contributed to the development of SkyBound, an innovative Android application aimed at streamlining the sale of drones through seamless integration with Google Firebase.</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Participated in designing, implementing, and debugging functionalities to ensure a smooth user experience and high-quality code.</p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--==================== PROJECTS 4 ====================
+                    <div class="projects__content">
+                        <div>
+                            <i class="uil uil-swatchbook projects__icon"></i>
+                            <h3 class="projects__title">SMART DEC</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link projects__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="projects__modal">
+                            <div class="projects__modal-content">
+                                <h4 class="projects__modal-title">Feasibility Study of the SPACE Code Application on DEC Accident Analysis of SMART</h4>
+                                <i class="uil uil-times projects__modal-close"></i>
+
+                                <ul class="projects__modal-projects grid">
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>SPACE Code Calculation Sheet Preparation</p>
+                                    </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Passive Safety Injection System (PSIS)</p>
+                                        </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Passive Residual Heat Removal System (PRHRS)</p>
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    ==================== PROJECTS 5 ====================
+                    <div class="projects__content">
+                        <div>
+                            <i class="uil uil-swatchbook projects__icon"></i>
+                            <h3 class="projects__title">PCCS</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link projects__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="projects__modal">
+                            <div class="projects__modal-content">
+                                <h4 class="projects__modal-title">Conceptual Design and Development of Passive Containment Cooling System for APR1400</h4>
+                                <i class="uil uil-times projects__modal-close"></i>
+
+                                <ul class="projects__modal-projects grid">
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Literature Survey on Condensation with Non-condensable Gases</p>
+                                    </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Separate and integral test facilities to validate the MARS condensation model</p>
+                                        </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Available condensation models (e.g. Colburn-Hougen, Peterson's Model)</p>
+                                        </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Review of MARS condensation model</p>
+                                        </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>COPAIN Test Facility (on-plane condensation) Simulations through MARS-KS</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Dehbi, Kawakubo, Su, Lee Experiments (on-tube condensation) Simulations through MARS-KS</p>
+                                    </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>MARS trouble report to KINS: Volume average velocity deficiency</p>
+                                        </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Multi-Compartment and Multi-Dimension Simulations (conceptual) through GOTHIC</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>                       
+
+                    ==================== PROJECTS 6 ====================
+                    <div class="projects__content">
+                        <div>
+                            <i class="uil uil-swatchbook projects__icon"></i>
+                            <h3 class="projects__title">ATLAS</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link projects__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="projects__modal">
+                            <div class="projects__modal-content">
+                                <h4 class="projects__modal-title">Determination of ATLAS Heat Loss and Improvement of MARS Input Model</h4>
+                                <i class="uil uil-times projects__modal-close"></i>
+
+                                <ul class="projects__modal-projects grid">
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>ATLAS Experimental Facility Heat Loss Quantification of RCS side</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Integral and Differential Approaches</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Implementation of Heat Loss Modeling to MARS Input</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Simulations of OECD and DSP Problems with the new MARS Input</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> 
+
+                    ==================== PROJECTS 7 ====================
+                    <div class="projects__content">
+                        <div>
+                            <i class="uil uil-swatchbook projects__icon"></i>
+                            <h3 class="projects__title">NON-LOCA</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link projects__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="projects__modal">
+                            <div class="projects__modal-content">
+                                <h4 class="projects__modal-title">SPACE Code Input Deck Preparation and Validation</h4>
+                                <i class="uil uil-times projects__modal-close"></i>
+
+                                <ul class="projects__modal-projects grid">
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>HANUL 1&2 Hydraulics and Heat Structure Calculation Sheet Preparation for SPACE</p>
+                                    </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Reactor pressure vessel</p>
+                                        </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Steam generators</p>
+                                        </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Steam generators</p>
+                                        </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Secondary Systems</p>
+                                        </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>HANUL 5&6 Hydraulics and Heat Structure Calculation Sheet Preparation for SPACE</p>
+                                    </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Steam generators</p>
+                                        </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Steam lines</p>
+                                        </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Safety systems</p>
+                                        </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>SPACE Code Validation</p>
+                                        </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>DSP01 - ATLAS DVI line break SBLOCA simulation</p>
+                                        </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>DSP02 - ATLAS CL SBLOCA</p>
+                                        </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Marviken sensitivity tests</p>
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    ==================== PROJECTS 8 ====================
+                    <div class="projects__content">
+                        <div>
+                            <i class="uil uil-swatchbook projects__icon"></i>
+                            <h3 class="projects__title">PAFS</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link projects__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="projects__modal">
+                            <div class="projects__modal-content">
+                                <h4 class="projects__modal-title">Passive Auxiliary Feedwater System Development</h4>
+                                <i class="uil uil-times projects__modal-close"></i>
+
+                                <ul class="projects__modal-projects grid">
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Calculation of Pipe Flow Resistance Coefficients</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>RELAP5 Input Deck Preparation for HANUL5&6</p>
+                                    </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Full steady-state input model</p>
+                                        </li>
+                                        <li class="projects__modal-project-ind">
+                                            <i class="uil uil-check projects__modal-icon"></i>
+                                            <p>Code-to-code verification with SPACE</p>
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    ==================== PROJECTS 9 ====================
+                    <div class="projects__content">
+                        <div>
+                            <i class="uil uil-swatchbook projects__icon"></i>
+                            <h3 class="projects__title">ACHX</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link projects__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="projects__modal">
+                            <div class="projects__modal-content">
+                                <h4 class="projects__modal-title">Air Cooling Heat Exchanger Experiment Simulations through MARS-KS</h4>
+                                <i class="uil uil-times projects__modal-close"></i>
+
+                                <ul class="projects__modal-projects grid">
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Fin Efficiency</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Fouling</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Heat Transfer Coefficient</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Loss Coefficient</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> 
+
+                    ==================== PROJECTS 10 ====================
+                    <div class="projects__content">
+                        <div>
+                            <i class="uil uil-swatchbook projects__icon"></i>
+                            <h3 class="projects__title">IoT</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link projects__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="projects__modal">
+                            <div class="projects__modal-content">
+                                <h4 class="projects__modal-title"> Review of Regulatory Criteria for using IoT Technologies in Radioactive Waste Management</h4>
+                                <i class="uil uil-times projects__modal-close"></i>
+
+                                <ul class="projects__modal-projects grid">
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Review of RFID (Radio Frequency Identification System) and IoT technologies</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Review of IoT applications in radioactive waste management</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Review of global IoT standards and best practices</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> 
+
+                    ==================== PROJECTS 11 ====================
+                    <div class="projects__content">
+                        <div>
+                            <i class="uil uil-swatchbook projects__icon"></i>
+                            <h3 class="projects__title">EUR</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link projects__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="projects__modal">
+                            <div class="projects__modal-content">
+                                <h4 class="projects__modal-title">APR1000 PAFS Standard Design Development and EUR Certification Support</h4>
+                                <i class="uil uil-times projects__modal-close"></i>
+
+                                <ul class="projects__modal-projects grid">
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Literature Review</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Technical Support</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> 
+                    -->
+                </div>
+            </section>
+
+            <!--==================== PAPERS ====================-->
+            <section class="paper section" id="paper" data-id="paper">
+                <h2 class="section__title">Repository</h2>
+                <span class="section__subtitle">GitHub Repository Links</span>
+                
+                <div class="paper__container container swiper">
+                    <div class="swiper-wrapper">
+                        <!--==================== PAPER 1 ====================-->
+                        <div class="paper__content grid swiper-slide">
+                            <img src="assets/img/paper1.jpg" alt="CFD code OpenFOAM mesh for pool scrubbing geometry" class="paper__img">
+
+                            <div class="paper__dat">
+                                <h3 class="paper__title">End-of-Studies Project - ShopySolde</h3>
+                                <p class="paper__description">Contribution to 'ShopySolde': Streamlined liquidation platform development, showcasing full-stack expertise and React proficiency.</p>
+                                <a href="https://github.com/m0rphMZ" target="_blank" class="button button--flex button--small paper__button">
+                                    Link
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>  
+
+                        <!--==================== PAPER 2 ====================-->
+                        <div class="paper__content grid swiper-slide">
+                            <img src="assets/img/paper2.jpg" alt="Small modular reactor containment pressure and radioactivity" class="paper__img">
+
+                            <div class="paper__dat">
+                                <h3 class="paper__title">Multi-Platform development project (Java, Symfony, Codename One) - Touskieart</h3>
+                                <p class="paper__description">Touskieart: Versatile multi-platform cultural hub, showcasing Java, Symfony, and Codename One integration.</p>
+                                <a href="https://github.com/m0rphMZ/PI_ThirdYear_Esprit_WebDesktopMobile" target="_blank" class="button button--flex button--small paper__button">
+                                    Link
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>   
+
+                        <!--==================== PAPER 3 ====================-->
+                        <div class="paper__content grid swiper-slide">
+                            <img src="assets/img/paper3.jpg" alt="Integral experiment test facility" class="paper__img">
+
+                            <div class="paper__dat">
+                                <h3 class="paper__title">Summer Internship Project at SM Devis</h3>
+                                <p class="paper__description">Web-based platform connecting renovation seekers with service providers, featuring Symfony and MySQL integration.</p>
+                                <a href="https://github.com/m0rphMZ/Summer_Internship_SMDevis" target="_blank" class="button button--flex button--small paper__button">
+                                    Link
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>                       
+
+                        <!--==================== PAPER 4 ====================
+                        <div class="paper__content grid swiper-slide">
+                            <img src="assets/img/paper4.jpg" alt="Wall condensation experiment" class="paper__img">
+
+                            <div class="paper__dat">
+                                <h3 class="paper__title">#wallcondensation</h3>
+                                <p class="paper__description">Capability of MARS-KS on Predicting Wall Condensation in the Presence of Non-Condensable Gases</p>
+                                <a href="https://www.researchgate.net/publication/306224035_Capability_of_MARS-KS_on_Predicting_Wall_Condensation_in_the_Presence_of_Non-Condensable_Gases" target="_blank" class="button button--flex button--small paper__button">
+                                    Read
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div> 
+
+                        <!--==================== PAPER 5 ====================
+                        <div class="paper__content grid swiper-slide">
+                            <img src="assets/img/paper5.jpg" alt="MARS-KS, GOTHIC, CUPID, and CFX codes comparison on COPAIN test facility" class="paper__img">
+
+                            <div class="paper__dat">
+                                <h3 class="paper__title">#codetocodecomparison</h3>
+                                <p class="paper__description">Prediction of Wall Condensation in the Presence of Non-Condensable Gases through Various Thermal-Hydraulic Codes</p>
+                                <a href="https://www.researchgate.net/publication/306224130_Prediction_of_Wall_Condensation_in_the_Presence_of_Non-Condensable_Gases_through_Various_Thermal-Hydraulic_Codes" target="_blank" class="button button--flex button--small paper__button">
+                                    Read
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div> 
+                        
+                        <!--==================== PAPER 6 ====================
+                        <div class="paper__content grid swiper-slide">
+                            <img src="assets/img/paper6.jpg" alt="Small break loca accident facility" class="paper__img">
+
+                            <div class="paper__dat">
+                                <h3 class="paper__title">#scalinganlaysis</h3>
+                                <p class="paper__description">Scaling Analysis for DVI Line Break Accident of APR1400 based on ATLAS Experiment</p>
+                                <a href="https://www.researchgate.net/publication/306400133_Scaling_Analysis_for_DVI_Line_Break_Accident_of_APR1400_based_on_ATLAS_Experiment" target="_blank" class="button button--flex button--small paper__button">
+                                    Read
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>                         
+                        
+                        <!--==================== PAPER 7 ====================
+                        <div class="paper__content grid swiper-slide">
+                            <img src="assets/img/paper7.jpg" alt="Water velocity vector plot" class="paper__img">
+
+                            <div class="paper__dat">
+                                <h3 class="paper__title">#bubblediameter</h3>
+                                <p class="paper__description">Bubble Diameter Evaluation in Pool Scrubbing Geometries</p>
+                                <a href="https://www.researchgate.net/publication/370289690_Bubble_Diameter_Evaluation_in_Pool_Scrubbing_Geometries" target="_blank" class="button button--flex button--small paper__button">
+                                    Read
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>                         
+                        
+                        <!--==================== PAPER 8 ====================
+                        <div class="paper__content grid swiper-slide">
+                            <img src="assets/img/paper8.jpg" alt="Water velocity vector plot" class="paper__img">
+
+                            <div class="paper__dat">
+                                <h3 class="paper__title">#turbulence</h3>
+                                <p class="paper__description">Influence of Inlet Turbulent Boundary Conditions on Bubble Diameter Calculation</p>
+                                <a href="https://www.researchgate.net/publication/370902232_Influence_of_Inlet_Turbulent_Boundary_Conditions_on_Bubble_Diameter_Calculation" target="_blank" class="button button--flex button--small paper__button">
+                                    Read
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>      -->                   
+
+                    </div>
+
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next">
+                            <i class="uil uil-angle-right-b swiper-paper-icon"></i>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <i class="uil uil-angle-left-b swiper-paper-icon"></i>
+                        </div>
+
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            
+            <!--==================== REQUEST MEETING ====================-->
+            <section class="project section" id="meeting">
+                <div class="project__bg">
+                    <div class="project__container container grid">
+                        <div class="project__data">
+                            <h2 class="project__title">Do you have any questions?</h2>
+                            <p class="project__description">Schedule a meeting and lets discuss!</p>
+                            <!-- <a href="#meeting" class="button button--flex button--white">
+                                Send a Request
+                                <i class="uil uil-message project_icon button__icon"></i>
+                            </a> -->
+                            <a href="#meeting" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mahmoud-mzoughi/30min?hide_gdpr_banner=1&text_color=7c716a&primary_color=0044FF'});return false;" class="button button--flex button--white">
+                                Send a Request
+                                <i href="#meeting" class="uil uil-message project_icon button__icon"></i>
+                            </a>
+                        </div>
+                        <img src="assets/img/perfil.png" alt="Erol Bicer" class="project__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== TESTIMONIAL ====================
+            <section class="testimonial section" id="testimonials">
+                <h2 class="section__title">References</h2>
+                <span class="section__subtitle">Testimonials</span>
+
+                <div class="testimonial__container container swiper">
+                    <div class="swiper-wrapper">
+                         <!--==================== TESTIMONIAL 1 ====================
+                         <div class="testimonial__content swiper-slide">
+                            <div class="testimonial__data">
+                                <div class="testimonial__header">
+                                    <img src="assets/img/dsk.jpg" alt="" class="testimonial__img">
+
+                                    <div>
+                                        <h3 class="testimonial__name">Mr. David S. Kessel</h3>
+                                        <span class="testimonial__client">KINGS, Research Professor</span>
+                                    </div>
+                                </div>
+                                <!-- <div>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                </div> 
+                            </div>
+                            <p class="testimonial__description">I have known Erol since 2014 when he was in my systems engineering class at KINGS and I can say without reservation that he is bright, hard working, and of the highest integrity.</p>
+                         </div>
+                         
+                         <!--==================== TESTIMONIAL 2 ====================
+                         <div class="testimonial__content swiper-slide">
+                            <div class="testimonial__data">
+                                <div class="testimonial__header">
+                                    <img src="assets/img/ad.jpg" alt="" class="testimonial__img">
+
+                                    <div>
+                                        <h3 class="testimonial__name">Dr. Aya Diab</h3>
+                                        <span class="testimonial__client">KINGS, Associate Professor</span>
+                                    </div>
+                                </div>
+                                <!-- <div>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                </div> 
+                            </div>
+                            <p class="testimonial__description">I met Erol in 2016, and ever since he always impressed me with his zeal to expand his knowledge, hone his skills and take on new challenges to enhance his career.</p>
+                         </div>
+                    </div>
+
+                    <!-- Add Pagination 
+                    <div class="swiper-pagination swiper-pagination-testimonial"></div>
+                </div>
+            </section>
+
+            <!--==================== VIDEOS ====================
+            <section class="videos section" id="videos">
+                <h2 class="section__title">Videos</h2>
+                <span class="section__subtitle">Appearances</span>
+
+                <div class="videos__container container grid">
+                    <div class="videos__content-top">
+                        <div class="iframe__container">
+                            <span class="videos__subtitle">Global SMR & MMR Development Activities</span>
+                            <iframe class="iframe" width="100%" height="100%" src="https://www.youtube.com/embed/qrbo3MOFXLc?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="videos__content">
+                        <div class="iframe__container">
+                            <span class="videos__subtitle">KNS Workshop on SMR & MMR</span>
+                            <iframe class="iframe" width="100%" height="100%" src="https://www.youtube.com/embed/mbRFUEH-VB8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="iframe__container">
+                            <span class="videos__subtitle">What is the age of Sunlight? </span>
+                            <iframe class="iframe" width="100%" height="100%" src="https://www.youtube.com/embed/Y2ZKCvnSVag?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="iframe__container">
+                            <span class="videos__subtitle">Half Life & Radioactive Decay</span>
+                            <iframe class="iframe" width="100%" height="100%" src="https://www.youtube.com/embed/CyPew95u3ws?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="iframe__container">
+                            <span class="videos__subtitle">Nuclear Engineering Conversations</span>
+                            <iframe class="iframe" width="100%" height="100%" src="https://www.youtube.com/embed/EP2NPvoiEsw?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                 </div>
+            </section>
+                -->
+            <!--==================== PRESENTATION ====================
+            <section class="presentation section" id="presentation">
+                <h2 class="section__title">Presentations</h2>
+                <span class="section__subtitle">Talks and Meetings</span>
+
+                <div class="presentation__container container grid">
+                    <div class="presentation__content">
+                        <div class="iframe__container">
+                            <span class="presentation__subtitle">FNC Technology Company Introduction</span>
+                            <iframe allowfullscreen class="iframe" width="100%" height="100%"  src="https://www.beautiful.ai/embed/-N99gCWOIluAxGaB3Ki_?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-MzlkefNLC76aJ1MLXfh"></iframe>
+                        </div>                        
+                        <div class="iframe__container">
+                            <span class="presentation__subtitle">SMR & MMR Development Status in the World</span>
+                            <iframe allowfullscreen class="iframe" width="100%" height="100%"  src="https://www.beautiful.ai/embed/-N9WTeD278rsbcimSTFQ?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-N9WS-JQcqI9yrHAPO0K"></iframe>
+                        </div>                                             
+                        <div class="iframe__container">
+                            <span class="presentation__subtitle">Non-electric Applications of Nuclear Energy</span>
+                            <iframe allowfullscreen class="iframe" width="100%" height="100%"  src="https://www.beautiful.ai/embed/-N9ApKSzKtHuNwFS2cEY?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-N9AnjGmWtBp2Tgf5cej"></iframe>
+                        </div>                                             
+                    </div>   
+                 </div>
+            </section>
+            -->
+
+            <!--==================== ONLINE MEETING ====================-->
+            <!-- <section class="meeting section" id="meeting">
+                <h2 class="section__title">Online Meeting</h2>
+                <span class="section__subtitle">Send a Request</span>
+
+                <div class="meeting__container container grid">
+                    <div class="meeting__content">
+                        <div class="zeeg__container">
+                            <iframe class="iframe-meeting" width="100%" height="100%" src="https://zeeg.me/erol/onlinemeeting"></iframe>
+                         </div>                        
+                    </div>   
+                 </div>
+            </section> -->
+
+            <!--==================== CONTACT ME ====================-->
+            <section class="contact section" id="contact" data-id="contact">
+                <h2 class="section__title">Contact Me</h2>
+                <span class="section__subtitle">Get in Touch</span>
+
+                <div class="contact__container container grid">
+                    <div>
+                        <div class="contact__information">
+                            <i class="uil uil-phone contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Call Me</h3>
+                                <span class="contact__subtitle">+216-29-916-488</span>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-envelope contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Email</h3>
+                                <!-- <span class="contact__subtitle">mahmoudmzoughi@gmail.com</span> -->
+                                <p><a class="contact__subtitle" href="mailto:mahmoudmzoughi@gmail.com">mahmoudmzoughi@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-map-marker contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Location</h3>
+                                <span class="contact__subtitle">Tunisia</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="" class="contact__form grid">
+                        <div class="contact__inputs grid">
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Full Name</label>
+                                <input type="text" placeholder="Enter full name" class="contact__input" id="fullName" onkeyup="validateName()">
+                                <span id="name-error" class="contact__subtitle"></span>
+                            </div>
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Email</label>
+                                <input type="email" placeholder="Enter email address" class="contact__input" id="email_id" onkeyup="validateEmail()">
+                                <span id="email-error" class="contact__subtitle"></span>
+                            </div>
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Subject</label>
+                            <input type="text" id="subject" placeholder="Enter a subject line" class="contact__input">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Message</label>
+                            <textarea name="" cols="0" rows="7" placeholder="Enter your message" class="contact__input" id="message" onkeyup="validateMessage()"></textarea>
+                            <span id="message-error" class="contact__subtitle"></span>
+                        </div>
+                        <div>
+                            <a onclick="return SendMail()" class="button button--flex">
+                            Send Message
+                            <i class="uil uil-message button__icon"></i>
+                        </a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__bg">
+                <div class="footer__container container grid">
+                    <div>
+                        <a href="#" class="footer__title">Mahmoud Mzoughi</a><br>
+                        <span class="footer__subtitle">Engineering Student</span>
+                    </div>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#projects" class="footer__link">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#paper" class="footer__link">Repository</a>
+                        </li>
+                        <!--<li>
+                            <a href="#testimonials" class="footer__link">References</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#videos" class="footer__link">Videos</a>
+                        </li>
+                        -->
+                        <li>
+                            <a href="#meeting" class="footer__link">Meeting</a>
+                        </li>
+                         <!--
+                        <li>
+                            <a href="#presentation" class="footer__link">Presentations</a>
+                        </li>
+                    -->
+                    </ul>
+
+                    <div class="footer__socials">
+                        <a href="https://www.linkedin.com/in/mmzoughi/" target="_blank" class="footer__social">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
+
+
+                        <a href="https://github.com/m0rphMZ" target="_blank" class="footer__social">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <p class="footer__copy">&#169; All rights reserved.</p>
+            </div>
+        </footer>
+        
+        <!--==================== SCROLL TOP ====================-->
+        <a href="" class="scrollup" id="scroll-up">
+            <i class="uil uil-arrow-up scrollup__icon"></i>
+        </a>
+
+        <!--==================== SWIPER JS ====================-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--==================== MAIN JS ====================-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
