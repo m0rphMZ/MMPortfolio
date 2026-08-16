@@ -159,7 +159,7 @@
         var session = [
             { t: '$ kubectl get platforms', c: '' },
             { t: 'NAME   STATUS  TEAMS  ENGINEERS', c: 't-dim' },
-            { t: 'idp    running  25+    400+', c: 't-ok' },
+            { t: 'idp    running  20+    300+', c: 't-ok' },
             { t: '', c: '' },
             { t: '$ helm upgrade idp --namespace prod', c: '' },
             { t: '✓ release "idp" deployed', c: 't-ok' },
